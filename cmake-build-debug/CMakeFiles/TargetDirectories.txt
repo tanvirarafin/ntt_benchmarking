@@ -1,0 +1,3 @@
+/home/marafin/CLionProjects/ntt_experiments/cmake-build-debug/CMakeFiles/ntt_experiments.dir
+/home/marafin/CLionProjects/ntt_experiments/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/marafin/CLionProjects/ntt_experiments/cmake-build-debug/CMakeFiles/rebuild_cache.dir
