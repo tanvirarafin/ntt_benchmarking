@@ -3,12 +3,12 @@ This is a benchmarking suite for number theoratic transform. This should act as 
 # Useage
 Create a build and build/results directory, and then make and execute the package from the build directory. The test values are written in the results directory. 
 
-'''
+```
 mkdir -p build/results
 cd build
 cmake ..
 make
 ./ntt_experiments
-'''
+```
 
 
