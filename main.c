@@ -7,7 +7,7 @@
 #include "test_cases.h"
 #include "test_correctness.h"
 #include "test_speed.h"
-
+#include "defs.h"
 
 
 int main() {
@@ -25,19 +25,18 @@ int main() {
             }
         }
     }
-/*
-    int test_cases_to_run = 6;
-    printf("Testing forward NTT \n\n");
+
+    int test_cases_to_run = NUM_OF_TEST_CASES;
+
     report_test_fwd_perf_headers();
     for(size_t i = 0; i < test_cases_to_run; i++) {
         test_aligned_fwd_perf(&tests[i]);
     }
 
-    printf("Testing inverse NTT \n\n");
     report_test_inv_perf_headers();
     for(size_t i = 0; i < test_cases_to_run; i++) {
         test_inv_perf(&tests[i]);
     }
-*/
+
     return 0;
 }

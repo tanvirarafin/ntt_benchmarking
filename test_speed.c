@@ -23,7 +23,7 @@ void test_inv_perf(const test_case_t *t)
     const uint64_t n = t->n;
     const uint64_t q = t->q;
 
-    printf("%3.0lu 0x%14.0lx ", t->m, t->q);
+    printf("m = %lu q = %lu cpu_cycles =", t->m, t->q);
 
     // We use a_cpy to reset a after every NTT call.
     // This is especially important when dealing with the lazy evaluation functions
@@ -40,8 +40,7 @@ void test_inv_perf(const test_case_t *t)
 
 void report_test_fwd_perf_headers(void)
 {
-    printf("                     |            fwd                                \n");
-    printf("----------------------------------------------------------------------- ");
+    printf("fwd   pass\n");
     printf("--------------------------------------\n");
 }
 
@@ -53,7 +52,7 @@ static inline void test_fwd_perf(const test_case_t *t,
     const uint64_t q = t->q;
     const uint64_t n = t->n;
 
-    printf("%3.0lu 0x%14.0lx ", t->m, t->q);
+    printf("m = %lu q = %lu cpu_cycles = ", t->m, t->q);
 
     MEASURE(fwd_ntt_ref_harvey(a, n, q, t->w_powers.ptr, t->w_powers_con.ptr));
     memcpy(a, a_cpy, n * sizeof(uint64_t));
@@ -80,7 +79,6 @@ void test_aligned_fwd_perf(const test_case_t *t)
 
 void report_test_inv_perf_headers(void)
 {
-    printf("                     |            inv\n");
+    printf("inv pass \n");
     printf("------------------------------------------------------\n");
-
 }

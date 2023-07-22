@@ -6,6 +6,7 @@
 
 #include "test_cases.h"
 #include "ntt_reference.h"
+#include "defs.h"
 #include <string.h>
 #include <stdio.h>
 
