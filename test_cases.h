@@ -58,6 +58,10 @@ static test_case_t tests[] = {
 
 
 static test_case_t tests[] = {
+        {.m = 4, .q = 251, .w = 19, .w_inv = 185, .n_inv.op = 204},      // NOLINT
+        {.m = 5, .q = 0x1e01, .w = 330, .w_inv = 675, .n_inv.op = 7441},      // NOLINT
+        {.m = 6, .q = 0x1e01, .w = 202, .w_inv = 4601, .n_inv.op = 7561},      // NOLINT
+        {.m = 7, .q = 0x1e01, .w = 198, .w_inv = 1125, .n_inv.op = 7621},      // NOLINT
         {.m = 8, .q = 0x1e01, .w = 62, .w_inv = 1115, .n_inv.op = 7651},      // NOLINT
         {.m = 9, .q = 0x10001, .w = 431, .w_inv = 55045, .n_inv.op = 65409},  // NOLINT
         {.m = 10, .q = 0x10001, .w = 33, .w_inv = 1986, .n_inv.op = 65473},   // NOLINT
