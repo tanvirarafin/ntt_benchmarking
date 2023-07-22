@@ -50,6 +50,12 @@ static inline void random_buf(uint64_t *values, const size_t n, const uint64_t q
         values[i] = rand() % q;
     }
 }
+/*
+static test_case_t tests[] = {
+        {.m = 8, .q = 0x1e01, .w = 62, .w_inv = 1115, .n_inv.op = 7651}      // NOLINT
+};
+*/
+
 
 static test_case_t tests[] = {
         {.m = 8, .q = 0x1e01, .w = 62, .w_inv = 1115, .n_inv.op = 7651},      // NOLINT
@@ -58,8 +64,12 @@ static test_case_t tests[] = {
         {.m = 11, .q = 0x10001, .w = 21, .w_inv = 49933, .n_inv.op = 65505},  // NOLINT
         {.m = 12, .q = 0x10001, .w = 13, .w_inv = 15124, .n_inv.op = 65521},  // NOLINT
         {.m = 13, .q = 0x10001, .w = 15, .w_inv = 30584, .n_inv.op = 65529},  // NOLINT
-        {.m = 14, .q = 0x10001, .w = 9, .w_inv = 7282, .n_inv.op = 65533},    // NOLINT
-        {.m = 14, .q = 0xc0001, .w = 9, .w_inv = 174763, .n_inv.op = 786385}, // NOLINT
+        {.m = 14, .q = 0x10001, .w = 9, .w_inv = 7282, .n_inv.op = 65533}    // NOLINT
+        };
+/*
+ * other values are on a field with q>2^16+1
+ * use them for 32 and 64 bit cases
+ *  {.m = 14, .q = 0xc0001, .w = 9, .w_inv = 174763, .n_inv.op = 786385}, // NOLINT
         {.m        = 14,
                 .q        = 0xfff0001,  // NOLINT
                 .w        = 10360,      // NOLINT
@@ -114,8 +124,8 @@ static test_case_t tests[] = {
                 .q        = 0x100180001,       // NOLINT
                 .w        = 79247,
                 .w_inv    = 4203069932,   // NOLINT
-                .n_inv.op = 4296507381}}; // NOLINT
-
+                .n_inv.op = 4296507381}
+ */
 
 static inline int allocate_aligned_array(aligned64_ptr_t *aptr, size_t qw_num)
 {

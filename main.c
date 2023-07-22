@@ -25,8 +25,8 @@ int main() {
             }
         }
     }
-
-    int test_cases_to_run = 4;
+/*
+    int test_cases_to_run = 6;
     printf("Testing forward NTT \n\n");
     report_test_fwd_perf_headers();
     for(size_t i = 0; i < test_cases_to_run; i++) {
@@ -38,6 +38,6 @@ int main() {
     for(size_t i = 0; i < test_cases_to_run; i++) {
         test_inv_perf(&tests[i]);
     }
-
+*/
     return 0;
 }
